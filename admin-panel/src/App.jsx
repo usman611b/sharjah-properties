@@ -55,11 +55,11 @@ const App = () => {
 
   return (
     <ToastProvider>
-      <div className="flex">
+            <div className="flex">
         <Sidebar onLogout={handleLogout} />
         <div className="flex-1 lg:ml-64 p-4 lg:p-6 bg-gray-50 min-h-screen">
-          <Routes>
-            <Route path="/" element={<Navigate to="/dashboard" />} />
+                <Routes>
+                  <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={
               <ProtectedRoute>
                 <Dashboard />
@@ -87,9 +87,9 @@ const App = () => {
             } />
 
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
-          </Routes>
-        </div>
-      </div>
+                </Routes>
+              </div>
+            </div>
     </ToastProvider>
   );
 };

@@ -18,6 +18,15 @@ app.use(express.json())
 // Serve uploaded images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
+// Basic route for testing
+app.get('/', (req, res) => {
+  res.json({ message: 'Sharjah Properties API is running!' })
+})
+
+app.get('/api', (req, res) => {
+  res.json({ message: 'Sharjah Properties API is running!' })
+})
+
 // Routes
 app.use('/api/admin', adminRoutes);
 app.use('/api/properties', propertyRoutes)

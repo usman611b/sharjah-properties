@@ -75,6 +75,56 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// POST /api/admin/create (for initial setup)
+router.post('/create', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Check if admin already exists
+    const existingAdmin = await Admin.findOne({});
+    if (existingAdmin) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Admin already exists. Use update endpoint instead.' 
+      });
+    }
+
+    // Validate input
+    if (!email || !password) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Email and password are required' 
+      });
+    }
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create admin
+    const admin = new Admin({
+      email: email,
+      password: hashedPassword
+    });
+
+    await admin.save();
+
+    res.status(201).json({ 
+      success: true, 
+      message: 'Admin created successfully',
+      admin: {
+        id: admin._id,
+        email: admin.email
+      }
+    });
+  } catch (error) {
+    console.error('Create admin error:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Server error. Please try again later.' 
+    });
+  }
+});
+
 // GET /api/admin/verify
 router.get('/verify', async (req, res) => {
   try {

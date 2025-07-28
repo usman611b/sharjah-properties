@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "echo 'No build step required'"
+    "build": "echo 'No build step required'",
+    "update-admin": "node updateAdmin.js"
   },
   "keywords": ["real-estate", "api", "nodejs", "express", "mongodb"],
   "author": "Usman Ali",

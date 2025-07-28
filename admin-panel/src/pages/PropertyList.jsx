@@ -126,7 +126,7 @@ const PropertyList = () => {
               {property.images && property.images[0] && (
                 <div className="h-48 overflow-hidden">
                   <img
-                    src={`http://localhost:5000${property.images[0].path}`}
+                    src={`https://sharjah-properties.onrender.com${property.images[0].path}`}
                     alt={property.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />

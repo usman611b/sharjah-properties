@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const PropertyCard = ({ property }) => {
   // Get the first image or use a placeholder
   const mainImage = property.images && property.images.length > 0 
-    ? `http://localhost:5000${property.images[0].path}`
+    ? `https://sharjah-properties.onrender.com${property.images[0].path}`
     : 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800'
 
   // Format price in PKR

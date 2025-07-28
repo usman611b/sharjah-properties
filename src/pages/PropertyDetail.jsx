@@ -124,7 +124,7 @@ const PropertyDetail = () => {
             >
               <div className="relative">
                 <img
-                  src={property.images && property.images[selectedImage] ? `http://localhost:5000${property.images[selectedImage].path}` : 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800'}
+                  src={property.images && property.images[selectedImage] ? `https://sharjah-properties.onrender.com${property.images[selectedImage].path}` : 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800'}
                   alt={property.title}
                   className="w-full h-96 object-cover"
                 />
@@ -140,7 +140,7 @@ const PropertyDetail = () => {
                           }`}
                         >
                           <img
-                            src={`http://localhost:5000${image.path}`}
+                            src={`https://sharjah-properties.onrender.com${image.path}`}
                             alt={`${property.title} ${index + 1}`}
                             className="w-full h-full object-cover"
                           />

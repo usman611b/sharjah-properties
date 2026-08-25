@@ -1,318 +1,189 @@
-# 🏠 Sharjah Properties - Pakistan Real Estate Platform
+<div align="center">
 
-A modern, full-stack real estate platform built for the Pakistani market, featuring a React frontend, Node.js backend with MongoDB, and a comprehensive admin panel. This platform showcases properties across Pakistan's most prestigious housing societies including DHA, Bahria Town, Gulberg, and Model Town.
+<img src="./docs/project-hero.svg" alt="Sharjah Properties full-stack platform" width="100%" />
 
-## 🚀 Live Demo
+<br/>
 
-- **Frontend**: [Coming Soon]
-- **Admin Panel**: [Coming Soon]
+[![React](https://img.shields.io/badge/React-111827?style=flat-square&logo=react&logoColor=61DAFB)](#technology-stack)
+[![Node.js](https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=nodedotjs&logoColor=5FA04E)](#technology-stack)
+[![Express](https://img.shields.io/badge/Express-111827?style=flat-square&logo=express&logoColor=white)](#technology-stack)
+[![MongoDB](https://img.shields.io/badge/MongoDB-111827?style=flat-square&logo=mongodb&logoColor=47A248)](#technology-stack)
+[![JWT](https://img.shields.io/badge/JWT-111827?style=flat-square&logo=jsonwebtokens&logoColor=white)](#technology-stack)
 
-## ✨ Features
+**A full-stack real-estate platform combining property discovery, consultation flows, media handling, authentication, and an operational admin surface.**
 
-### 🎨 Frontend (Client)
-- **Modern Design**: Clean, professional design with smooth animations
-- **Responsive**: Fully responsive design that works on all devices
-- **Property Listings**: Browse and search through property listings by Marla size
-- **Property Details**: Detailed property pages with image galleries
-- **Contact Forms**: Multiple contact forms for inquiries and viewings
-- **WhatsApp Integration**: Floating WhatsApp button for instant communication
-- **Toast Notifications**: Modern toast notifications for better UX
-- **Pakistan Context**: Localized for Pakistani real estate market
-- **Fast Performance**: Built with Vite for optimal performance
-- **SEO Friendly**: Proper meta tags and semantic HTML
+[Live application](https://sharjah-properties.vercel.app)
 
-### 🔧 Backend (Server)
-- **RESTful API**: Complete API for properties and consultations
-- **MongoDB Integration**: Robust database with proper schemas
-- **Image Upload**: Multer middleware for property image uploads
-- **Data Validation**: Comprehensive validation for all inputs
-- **Error Handling**: Proper error handling and responses
-- **JWT Authentication**: Secure admin authentication system
-
-### 👨‍💼 Admin Panel
-- **Dashboard**: Real-time statistics and recent activity
-- **Property Management**: Add, edit, delete properties
-- **Consultation Management**: View and manage form submissions
-- **Image Management**: Upload and manage property images
-- **User Authentication**: Secure admin login system
-- **Modern UI**: Clean admin interface with toast notifications
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **React 18** - UI framework
-- **Vite** - Build tool
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **React Router DOM** - Routing
-- **Axios** - HTTP client
-- **Lucide React** - Icons
-
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM
-- **Multer** - File upload middleware
-- **CORS** - Cross-origin resource sharing
-- **JWT** - Authentication
-- **Bcrypt** - Password hashing
-
-### Admin Panel
-- **React 18** - UI framework
-- **Tailwind CSS** - Styling
-- **React Router DOM** - Routing
-- **Axios** - HTTP client
-
-## 📁 Project Structure
-
-```
-SHARJHA/
-├── src/                    # Frontend client
-│   ├── components/         # Reusable components
-│   │   ├── Navbar.jsx     # Navigation
-│   │   ├── Footer.jsx     # Footer
-│   │   ├── PropertyCard.jsx # Property card
-│   │   ├── WhatsAppButton.jsx # WhatsApp floating button
-│   │   └── Toast.jsx      # Toast notifications
-│   ├── pages/             # Page components
-│   │   ├── Home.jsx       # Home page
-│   │   ├── Properties.jsx # Properties listing
-│   │   ├── PropertyDetail.jsx # Individual property
-│   │   ├── About.jsx      # About page
-│   │   ├── Services.jsx   # Services page
-│   │   └── Contact.jsx    # Contact page
-│   ├── services/          # API services
-│   │   ├── api.js         # Base API configuration
-│   │   ├── propertyService.js # Property API calls
-│   │   ├── contactService.js # Contact form API calls
-│   │   └── authService.js # Authentication service
-│   ├── context/           # React context
-│   │   ├── AuthContext.jsx # Authentication context
-│   │   └── ToastContext.jsx # Toast notifications context
-│   └── assets/            # Static assets
-├── admin-panel/           # Admin panel
-│   ├── src/
-│   │   ├── components/    # Admin components
-│   │   ├── pages/         # Admin pages
-│   │   ├── services/      # Admin API services
-│   │   └── context/       # Admin context
-│   └── package.json
-├── backend/               # Backend server
-│   ├── controllers/       # Route controllers
-│   ├── models/           # Database models
-│   ├── routes/           # API routes
-│   ├── middleware/       # Custom middleware
-│   ├── uploads/          # Uploaded files
-│   └── server.js         # Main server file
-└── README.md
-```
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (local or cloud)
-- Git
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/sharjah-properties.git
-   cd sharjah-properties
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Install frontend dependencies
-   npm install
-   
-   # Install backend dependencies
-   cd backend
-   npm install
-   
-   # Install admin panel dependencies
-   cd ../admin-panel
-   npm install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   # In backend folder, create .env file
-   cd ../backend
-   cp .env.example .env
-   ```
-   
-   Edit `.env` file:
-   ```env
-   MONGO_URI=mongodb://localhost:27017/sharjah
-   JWT_SECRET=your-secret-key
-   PORT=5000
-   ```
-
-4. **Start the development servers**
-   ```bash
-   # Start backend (in backend folder)
-   cd backend
-   npm start
-   
-   # Start frontend (in root folder)
-   cd ..
-   npm run dev
-   
-   # Start admin panel (in admin-panel folder)
-   cd admin-panel
-   npm run dev
-   ```
-
-5. **Seed the database**
-   ```bash
-   cd backend
-   node seedAdmin.js
-   ```
-
-## 🔐 Admin Access
-
-### Default Credentials
-- **Email**: `admin@gmail.com`
-- **Password**: `123456`
-
-### Updating Admin Credentials
-```bash
-cd backend
-node updateAdmin.js
-```
-
-## 📱 Available Scripts
-
-### Frontend
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-
-### Backend
-- `npm start` - Start production server
-- `npm run dev` - Start development server with nodemon
-
-### Admin Panel
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-
-## 🌐 API Endpoints
-
-### Authentication
-- `POST /api/admin/login` - Admin login
-- `POST /api/admin/logout` - Admin logout
-- `GET /api/admin/verify` - Verify token
-
-### Properties
-- `GET /api/properties` - Get all properties
-- `GET /api/properties/:id` - Get property by ID
-- `POST /api/properties` - Add new property (Admin only)
-- `PUT /api/properties/:id` - Update property (Admin only)
-- `DELETE /api/properties/:id` - Delete property (Admin only)
-
-### Consultations
-- `GET /api/consultations` - Get all consultations (Admin only)
-- `POST /api/consultations` - Add new consultation
-- `PUT /api/consultations/:id` - Update consultation (Admin only)
-- `DELETE /api/consultations/:id` - Delete consultation (Admin only)
-
-## 🎨 Features Overview
-
-### Property Management
-- ✅ Add new properties with images
-- ✅ Edit existing properties
-- ✅ Delete properties
-- ✅ Property categorization by Marla size
-- ✅ Image gallery for each property
-- ✅ Property features and amenities
-
-### Contact & Consultation
-- ✅ Contact form with validation
-- ✅ Property viewing requests
-- ✅ Service consultation requests
-- ✅ WhatsApp integration
-- ✅ Email notifications
-
-### Admin Features
-- ✅ Secure login system
-- ✅ Dashboard with statistics
-- ✅ Property management interface
-- ✅ Consultation management
-- ✅ Image upload and management
-- ✅ Modern toast notifications
-
-### User Experience
-- ✅ Responsive design
-- ✅ Smooth animations
-- ✅ Modern toast notifications
-- ✅ Loading states
-- ✅ Error handling
-- ✅ Form validation
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env` file in the backend directory:
-
-```env
-# Database
-MONGO_URI=mongodb://localhost:27017/sharjah
-
-# JWT
-JWT_SECRET=your-secret-key-here
-
-# Server
-PORT=5000
-
-# Optional: Cloud MongoDB
-# MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/sharjah
-```
-
-## 🚀 Deployment
-
-### Frontend Deployment
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to your hosting service
-
-### Backend Deployment
-1. Set up environment variables
-2. Install dependencies: `npm install`
-3. Start the server: `npm start`
-
-### Database Setup
-1. Set up MongoDB (local or cloud)
-2. Update the `MONGO_URI` in your environment variables
-3. Run the seed script: `node seedAdmin.js`
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Usman Ali**
-- Email: usmanali611b@gmail.com
-- GitHub: [@yourusername](https://github.com/yourusername)
-
-## 🙏 Acknowledgments
-
-- React team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- MongoDB for the database
-- All the open-source packages used in this project
+</div>
 
 ---
 
-⭐ **Star this repository if you found it helpful!** 
+## Product idea
+
+Sharjah Properties was built as more than a static listings website. The system separates the public property-discovery experience from the operational work required to manage listings, inquiries, media, and authenticated administration.
+
+The project demonstrates how a user-facing React application, a REST API, persistent storage, authentication, and an admin console fit together as one product.
+
+---
+
+## System surface
+
+```mermaid
+flowchart LR
+    V[Visitor] --> WEB[React Client]
+    A[Administrator] --> ADMIN[Admin Panel]
+    WEB --> API[Express REST API]
+    ADMIN --> API
+    API --> AUTH[JWT Authentication]
+    API --> DB[(MongoDB)]
+    API --> MEDIA[Media / Upload Handling]
+    WEB --> CONSULT[Consultation Flow]
+    CONSULT --> API
+```
+
+---
+
+## Core capabilities
+
+| Area | Capabilities |
+|---|---|
+| **Property discovery** | Listing pages, property detail views, responsive browsing, structured property information |
+| **Consultations** | Inquiry and viewing-request flows persisted through the backend |
+| **Administration** | Dashboard, property CRUD, consultation management, protected admin routes |
+| **Authentication** | JWT-based admin authentication and protected operations |
+| **Media** | Property image upload and management through backend middleware |
+| **API** | REST endpoints for properties, consultations, and authenticated admin operations |
+| **UX** | Responsive interface, toast feedback, navigation, contact flows, WhatsApp integration |
+
+---
+
+## Technology stack
+
+### Frontend
+
+- React 18
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- Framer Motion
+- Lucide React
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- JWT authentication
+- bcrypt
+- Multer
+- CORS
+
+### Admin surface
+
+- React
+- Tailwind CSS
+- Protected routing
+- API-backed property and consultation management
+
+---
+
+## Representative API surface
+
+```text
+POST   /api/admin/login
+GET    /api/admin/verify
+
+GET    /api/properties
+GET    /api/properties/:id
+POST   /api/properties
+PUT    /api/properties/:id
+DELETE /api/properties/:id
+
+GET    /api/consultations
+POST   /api/consultations
+PUT    /api/consultations/:id
+DELETE /api/consultations/:id
+```
+
+Administrative mutations are intended to be protected by authentication rather than relying on client-side route visibility.
+
+---
+
+## Project structure
+
+```text
+sharjah-properties/
+├── src/                  # Public React application
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── context/
+├── admin-panel/          # Authenticated operations UI
+│   └── src/
+├── backend/              # Express API + MongoDB models
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+├── docs/
+└── README.md
+```
+
+---
+
+## Local development
+
+### Prerequisites
+
+- Node.js
+- npm
+- MongoDB (local or hosted)
+
+### Install
+
+```bash
+git clone https://github.com/usman611b/sharjah-properties.git
+cd sharjah-properties
+npm install
+
+cd backend
+npm install
+
+cd ../admin-panel
+npm install
+```
+
+Create the backend environment configuration with your own database connection and secrets.
+
+Example shape:
+
+```env
+MONGO_URI=<your-mongodb-uri>
+JWT_SECRET=<strong-random-secret>
+PORT=5000
+```
+
+Do not commit production credentials or default administrator passwords to the repository.
+
+---
+
+## What this project demonstrates
+
+This repository is evidence of working across a complete application boundary:
+
+**interface → routing → API integration → authentication → persistent data → administration → deployment**
+
+The project is useful on the profile because it shows software engineering breadth beyond model- or notebook-only work.
+
+---
+
+<div align="center">
+
+### Product engineering, end to end.
+
+**Usman Ali** · [GitHub](https://github.com/usman611b) · [Portfolio](https://www.usmanalii.com/)
+
+</div>

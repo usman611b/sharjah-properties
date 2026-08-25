@@ -1,0 +1,14 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="300"><stop stop-color="#05060A"/><stop offset="0.58" stop-color="#08131A"/><stop offset="1" stop-color="#17091F"/></linearGradient>
+  <linearGradient id="a" x1="80" y1="0" x2="1120" y2="0"><stop stop-color="#45F3FF"/><stop offset="1" stop-color="#B05CFF"/></linearGradient>
+  <pattern id="g" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" stroke="#8190A3" stroke-opacity="0.07"/></pattern>
+</defs>
+<rect width="1200" height="300" rx="24" fill="url(#bg)"/><rect width="1200" height="300" rx="24" fill="url(#g)"/>
+<circle cx="82" cy="60" r="4" fill="#45F3FF"/><text x="100" y="66" fill="#45F3FF" font-size="14" font-family="Inter,Segoe UI,Arial" font-weight="700" letter-spacing="4">FULL-STACK PRODUCT SYSTEM</text>
+<text x="78" y="145" fill="#F8FAFC" font-size="58" font-family="Inter,Segoe UI,Arial" font-weight="800">Sharjah Properties</text>
+<text x="80" y="190" fill="url(#a)" font-size="25" font-family="Inter,Segoe UI,Arial" font-weight="700">Property discovery, administration, media, and consultation workflows.</text>
+<text x="80" y="234" fill="#BFCAD7" font-size="17" font-family="Inter,Segoe UI,Arial">React • Node.js • Express • MongoDB • JWT • Admin Operations</text>
+<path d="M874 70L970 104L1060 66L1140 120L1098 212L1002 184L918 242L844 196Z" stroke="url(#a)" stroke-opacity="0.36" stroke-width="1.5"/>
+<circle cx="970" cy="104" r="4" fill="#45F3FF"/><circle cx="1060" cy="66" r="3" fill="#61B6FF"/><circle cx="1140" cy="120" r="4" fill="#B05CFF"/><circle cx="1098" cy="212" r="4" fill="#B05CFF"/>
+</svg>
